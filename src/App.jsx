@@ -7,7 +7,7 @@ function App() {
 
   const [dataList, setDataList] = useState([]);
   const fetchData = async () => {
-    const response = await axios("../data.json");
+    const response = await axios("data.json");
     setDataList(response.data);
   };
   useEffect(() => {
