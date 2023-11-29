@@ -7,8 +7,9 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
+  color: whitesmoke;
   background: rgb(84,153,111);
-  background: radial-gradient(circle, rgba(84,153,111,1) 0%, rgba(27,42,60,1) 100%);
+  background: radial-gradient(circle, rgb(69, 122, 90) 0%, rgba(27,42,60,1) 100%);
 }
 
 h2 {
@@ -18,19 +19,25 @@ h2 {
 
 .accordion {
   width: 60vw;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  border:1px solid black;
+  padding: 2rem;
+  border-radius: 3%;
 }
-
+.accordion-item{
+  margin: .4rem;
+}
 .accordion-title {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #21aeca;
+  background-color: #153121;
 }
 
 .accordion-title:hover {
-  background-color: #3ab4cc;
+  background-color: #0c5a4d;
 }
 p{
   font-size: 1rem;
@@ -44,7 +51,10 @@ p{
 }
 
 .accordion-content {
-  background-color: #39b9d2;
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 1%;
+  
 }
 
 @media screen and (max-width: 700px) {
