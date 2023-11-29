@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
-
- export const Accordion = ({ title, description }) => {
+import React, { useState } from "react";
+import "../App.css";
+export const Accordion = ({ dataList }) => {
   const [isActive, setIsActive] = useState(false);
+  const [activeId, setActiveId] = useState(0);
 
-  return (
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+  const handleClick = (id) => {
+    setActiveId(id === activeId ? "" : id);
+  };
+  return dataList.map(({ id, title, description }) => (
+    <div className="accordion-item" key={id}>
+      <div className="accordion-title" onClick={() => handleClick(id)}>
         <div>{title}</div>
-        <div>{isActive ? '▲' : '▼'}</div>
+        <div>{activeId === id ? "▲" : "▼"}</div>
       </div>
-      {isActive && <div className="accordion-content"><p>{description}</p></div>}
+      {activeId === id && (
+        <div className="accordion-content">
+          <p>{description}</p>
+        </div>
+      )}
     </div>
-  );
+  ));
 };
-

@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
-import axios from "axios";
-import './App.css'
 import { Accordion } from './components/Accordion'
-
+import axios from "axios";
 function App() {
 
   const [dataList, setDataList] = useState([]);
@@ -18,9 +16,7 @@ function App() {
     <div>
       <div className="accordion">
        <h2>React Interview Questions</h2>
-        {dataList.map(({ id, title, description }) => (
-          <Accordion key={id} title={title} description={description} />
-        ))}
+        <Accordion dataList={dataList} />
       </div>
     </div>
   )
