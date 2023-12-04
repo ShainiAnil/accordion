@@ -15,7 +15,8 @@ function App() {
   return (
     <div>
       <div className="accordion">
-       <h2>React Interview Questions</h2>
+       <img src='images/image1.png'/>
+       <h2>FAQ</h2>
         <Accordion dataList={dataList} />
       </div>
     </div>

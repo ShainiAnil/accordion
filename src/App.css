@@ -7,37 +7,41 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
-  color: whitesmoke;
-  background: rgb(84,153,111);
-  background: radial-gradient(circle, rgb(69, 122, 90) 0%, rgba(27,42,60,1) 100%);
+  color: rgb(8, 8, 8);
+  /* background: rgb(84,153,111);
+  background: radial-gradient(circle, rgb(69, 122, 90) 0%, rgba(27,42,60,1) 100%); */
 }
 
 h2 {
   text-align: center;
-  margin: 2rem 0 2rem 0;
+  margin: 2%;
 }
-
+img{
+  width: 100%;
+  object-fit: contain;
+ }
 .accordion {
   width: 60vw;
   margin: 1rem auto;
-  border:1px solid black;
+  background-color: rgb(224, 225, 226);
   padding: 2rem;
   border-radius: 3%;
 }
 .accordion-item{
-  margin: .4rem;
-}
+  Width:100%;
+  height:auto;
+  margin:1%;
+ }
 .accordion-title {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #153121;
+  background-color: #e8ecea;
 }
 
 .accordion-title:hover {
-  background-color: #0c5a4d;
+  background-color: #f3f0f0;
 }
 p{
   font-size: 1rem;
@@ -51,10 +55,10 @@ p{
 }
 
 .accordion-content {
-  border: 1px solid black;
+  border: 1px solid rgb(165, 163, 163);
   border-top: none;
   border-radius: 1%;
-  
+  background-color: rgb(250, 250, 241);
 }
 
 @media screen and (max-width: 700px) {
