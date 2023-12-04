@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
 export const Accordion = ({ dataList }) => {
-  const [isActive, setIsActive] = useState(false);
   const [activeId, setActiveId] = useState(0);
 
   const handleClick = (id) => {
